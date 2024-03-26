@@ -56,14 +56,10 @@ button{
     cursor: pointer;
 }
 
-.user{
-    color: red;
-    display: none;
-}
 
 .password{
     color: red;
-    display: none;
+
 }
 
 .exist{
@@ -79,6 +75,9 @@ button{
 .login{
     text-decoration: underline;
     cursor: pointer;
+}
 
+.usernameError{
+    color: red;
 }
 

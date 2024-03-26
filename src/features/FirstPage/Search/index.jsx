@@ -1,8 +1,7 @@
-import style from "./index.module.css"
+import style from "./index.module.css";
 import {Link} from "react-router-dom";
-
-const SignIn = () => {
-    return(
+const Search = () =>{
+    return (
         <div className={style.mainCont}>
             <div className={style.formCont}>
                 <h1>Login Form</h1>
@@ -18,7 +17,7 @@ const SignIn = () => {
                         <span className={style.passwordError}></span>
                     </div>
 
-                    <button type={"submit"} >Submit</button>
+                    <button type={"submit"}>Submit</button>
                     <div className={style.exist}>
                         <span className={style.acct}>Dont have an Account?</span>
                         <Link to={"/signUp"} style={{color: "black"}}>
@@ -30,5 +29,4 @@ const SignIn = () => {
         </div>
     )
 }
-
-export default SignIn;
+export default Search

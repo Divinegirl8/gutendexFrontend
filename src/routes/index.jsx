@@ -1,6 +1,7 @@
 import SignUp from "../features/FirstPage/SignUp";
 import SignIn from "../features/FirstPage/SignIn";
 import FirstPage from "../features/FirstPage";
+import Search from "../features/FirstPage/Search";
 
 export const Routes = [
     {
@@ -16,7 +17,11 @@ export const Routes = [
         element : <SignIn/>
     },
     {
-        path : "",
-        element : <h2>hi</h2>
+        path : "/search",
+        element : <Search/>
+    },
+    {
+        path: "",
+        element: <></>
     }
 ]
