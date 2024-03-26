@@ -1,0 +1,83 @@
+body{
+    background-color: #59d6da;
+}
+
+.mainCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh;
+}
+
+.formCont {
+    box-shadow: 2px 2px 50px 1px #343030;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+.formCont form input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 400px;
+    font-size: 18px;
+    outline: none;
+    font-family: "DejaVu Sans", sans-serif;
+    padding-bottom: 10px;
+}
+
+.mainCont .formCont h1 {
+    text-align: center;
+    margin-top: 80px;
+    font-family: "DejaVu Sans", sans-serif;
+}
+
+input::placeholder{
+    font-family: "DejaVu Sans", sans-serif;
+}
+
+button{
+    margin-top: 25px;
+    width: 130px;
+    height: 35px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.user{
+    color: red;
+    display: none;
+}
+
+.password{
+    color: red;
+    display: none;
+}
+
+.exist{
+    margin-bottom: 100px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 16px;
+    font-family: "DejaVu Sans", sans-serif;
+}
+
+.login{
+    text-decoration: underline;
+    cursor: pointer;
+
+}
