@@ -44,7 +44,7 @@ input::placeholder{
     font-family: "DejaVu Sans", sans-serif;
 }
 
-button{
+.butn{
     margin-top: 25px;
     width: 130px;
     height: 35px;
@@ -57,7 +57,7 @@ button{
 }
 
 
-.password{
+.passwordError{
     color: red;
 
 }

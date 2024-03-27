@@ -18,7 +18,7 @@ const SignIn = () => {
                         <span className={style.passwordError}></span>
                     </div>
 
-                    <button type={"submit"} >Submit</button>
+                    <button type={"submit"} className={style.bttn}>Submit</button>
                     <div className={style.exist}>
                         <span className={style.acct}>Dont have an Account?</span>
                         <Link to={"/signUp"} style={{color: "black"}}>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import style from "./index.module.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
@@ -11,8 +11,8 @@ const SignUp = () => {
     const [message, setMessage] = useState('');
     const [usernameErrorMessage, setUsernameErrorMessage] = useState('');
     const [passwordErrorMessage, setPasswordErrorMessage] = useState('');
-
     const [showPassword, setShowPassword] = useState(false);
+    let navigation = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -27,9 +27,15 @@ const SignUp = () => {
 
             if (response.ok) {
                 const data = await response.json();
-                setMessage(data.message);
+                setMessage(data.id);
                 setUsernameErrorMessage('');
                 setPasswordErrorMessage('');
+
+
+                if (password !== " " && username !== " "){
+                    navigation(`/search/${data.id}`);
+
+                }
             } else {
                 const errorData = await response.json();
                 setMessage('');
@@ -46,6 +52,9 @@ const SignUp = () => {
             setPasswordErrorMessage(error.message);
         }
     };
+
+
+
 
 
     const togglePasswordVisibility = () => {
@@ -74,14 +83,14 @@ const SignUp = () => {
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                             />
-                            <button style={{marginLeft:"-50px",width:"50px",backgroundColor:"white",color:"black",marginTop:"18px",border:"none"}} onClick={togglePasswordVisibility} type="button">
-                                {showPassword ? <FontAwesomeIcon icon={faEyeSlash} /> : <FontAwesomeIcon icon={faEye} />}
+                            <button className={style.butn} style={{marginLeft:"-50px",width:"50px",backgroundColor:"white",color:"black",marginTop:"18px",border:"none"}} onClick={togglePasswordVisibility} type="button">
+                                {showPassword ? <FontAwesomeIcon icon={faEyeSlash} className={style.butn} /> : <FontAwesomeIcon icon={faEye} />}
                             </button>
                         </div>
 
                         {passwordErrorMessage && <span className={style.passwordError}>{passwordErrorMessage}</span>}
                     </div>
-                    <button type="submit">Submit</button>
+                    <button type="submit" className={style.butn}>Submit</button>
                     <div className={style.exist}>
                         <span className={style.acct}>Already have an account?</span>
                         <Link to="/signIn" style={{color: "black"}}>

@@ -17,7 +17,7 @@ export const Routes = [
         element : <SignIn/>
     },
     {
-        path : "/search",
+        path : "/search/:liberianId",
         element : <Search/>
     },
     {

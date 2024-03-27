@@ -44,7 +44,7 @@ input::placeholder{
     font-family: "DejaVu Sans", sans-serif;
 }
 
-button{
+.bttn{
     margin-top: 25px;
     width: 130px;
     height: 35px;
