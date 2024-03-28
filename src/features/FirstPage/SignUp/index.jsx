@@ -84,7 +84,7 @@ const SignUp = () => {
                                 onChange={(e) => setPassword(e.target.value)}
                             />
                             <button className={style.butn} style={{marginLeft:"-50px",width:"50px",backgroundColor:"white",color:"black",marginTop:"18px",border:"none"}} onClick={togglePasswordVisibility} type="button">
-                                {showPassword ? <FontAwesomeIcon icon={faEyeSlash} className={style.butn} /> : <FontAwesomeIcon icon={faEye} />}
+                                {showPassword ? <FontAwesomeIcon icon={faEyeSlash}  /> : <FontAwesomeIcon icon={faEye} />}
                             </button>
                         </div>
 
