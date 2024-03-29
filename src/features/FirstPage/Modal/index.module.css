@@ -1,0 +1,10 @@
+.butn{
+    width: 130px;
+    height: 35px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}

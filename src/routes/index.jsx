@@ -2,6 +2,7 @@ import SignUp from "../features/FirstPage/SignUp";
 import SignIn from "../features/FirstPage/SignIn";
 import FirstPage from "../features/FirstPage";
 import Search from "../features/FirstPage/Search";
+import ForgotPassword from "../features/FirstPage/ForgotPassword";
 
 export const Routes = [
     {
@@ -21,7 +22,8 @@ export const Routes = [
         element : <Search/>
     },
     {
-        path: "",
-        element: <></>
-    }
+        path: "/forgotPassword",
+        element: <ForgotPassword/>
+    },
+
 ]
