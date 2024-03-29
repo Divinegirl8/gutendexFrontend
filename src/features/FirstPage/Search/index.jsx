@@ -108,10 +108,14 @@ const Search = () => {
                 <div className={`${style.sidebar} ${isSideBarOpen ? style.sidebarOpen : ''}`}>
                     <div className={style.cancel} style={{ backgroundColor:"white",position: 'sticky', top: 0, zIndex: 1, display: "flex", flexDirection: 'row', justifyContent: "space-between" }}>
                         <h3 style={{ fontSize: "20px", marginLeft: "40px", fontFamily: "DejaVu Sans, sans-serif" }}>Reading List</h3>
-                        <FontAwesomeIcon onClick={closeSidebar} icon={faTimes} style={{ marginTop: "18px", fontSize: "22px", marginRight: "20px" }} />
+                        <FontAwesomeIcon onClick={closeSidebar} icon={faTimes} style={{ marginTop: "18px", fontSize: "22px", marginRight: "20px",cursor:"pointer" }} />
                     </div>
 
-                    {errorReadingList && <span>{errorReadingList}</span>}
+                    <div style={{marginTop:'20px',marginLeft:"41px"}}>
+                        {errorReadingList && <span >{errorReadingList}</span>}
+                    </div>
+
+
                     <ul style={{ listStyleType: "none", marginTop: "40px" }}>
                         {readingList.map((book) => (
                             <div className={style.container} key={book.bookId}>

@@ -56,14 +56,13 @@ input::placeholder{
     cursor: pointer;
 }
 
-.user{
+.usernameError{
     color: red;
-    display: none;
 }
 
-.password{
+.passwordError{
     color: red;
-    display: none;
+
 }
 
 .exist{
